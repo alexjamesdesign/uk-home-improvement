@@ -32,7 +32,7 @@ module.exports = {
         secondary: {
           light: "#F4F4F4",
           DEFAULT: "#363A3E",
-          dark: "#000",
+          dark: "#363A3E",
         },
       },
       spacing: {

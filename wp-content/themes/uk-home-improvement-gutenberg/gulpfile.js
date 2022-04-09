@@ -171,7 +171,7 @@ gulp.task("watch", () => {
  **************************/
 gulp.task("serve", () => {
   browserSync.init({
-    proxy: `adtrak-boilerplate.vm`,
+    proxy: `uk-home-improvement-gutenberg.local`,
     files: ["**/*.php", "**/*.js", "**/*.twig", "**/*.css"],
     ghostMode: false,
     open: false,

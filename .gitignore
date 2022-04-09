@@ -5,6 +5,10 @@ wp-content/themes/uk-home-improvement/node_modules/*
 wp-content/themes/uk-home-improvement/vendor/*
 wp-content/themes/uk-home-improvement/dist/*
 
+wp-content/themes/uk-home-improvement-gutenberg/node_modules/*
+wp-content/themes/uk-home-improvement-gutenberg/vendor/*
+wp-content/themes/uk-home-improvement-gutenberg/dist/*
+
 ##### DO NOT EDIT BELOW THIS LINE #####
 
 # Ignore the config

@@ -23,7 +23,6 @@
 
 }
 
-
 .skew-left { 
     width: 0;
     height: 0;
@@ -32,4 +31,24 @@
     position: absolute;
     left: 0;
     top: 0;
+}
+
+.triangle-left { 
+    width: 0;
+    height: 0;
+    border-top: 250px solid #AEDBDD;
+    border-right: 250px solid transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.triangle-right { 
+    width: 0;
+    height: 0;
+    border-bottom: 180px solid #16A3B8;
+    border-right: 180px solid transparent;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
