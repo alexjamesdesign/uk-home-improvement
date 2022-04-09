@@ -4,7 +4,7 @@ Typography
 
 @font-face {
   font-family: "Source Sans Pro";
-  src: url("/wp-content/themes/adtrak-tailwind-twig-timber/_resources/fonts/SourceSansPro-Regular.ttf")
+  src: url("/wp-content/themes/adtrak-tailwind-twig-timber-gutenberg/_assets/fonts/SourceSansPro-Regular.ttf")
     format("truetype");
   font-display: swap;
   font-weight: 300;
@@ -13,7 +13,7 @@ Typography
 
 @font-face {
   font-family: "Source Sans Pro";
-  src: url("/wp-content/themes/adtrak-tailwind-twig-timber/_resources/fonts/SourceSansPro-Bold.ttf")
+  src: url("/wp-content/themes/adtrak-tailwind-twig-timber-gutenberg/_assets/fonts/SourceSansPro-Bold.ttf")
     format("truetype");
   font-display: swap;
   font-weight: 700;
@@ -34,18 +34,18 @@ h5,
 .h5,
 h6,
 .h6 {
-  @apply mb-4 font-bold leading-snug text-secondary;
+  @apply mb-4 font-bold leading-snug;
 }
 
-h1, .h1 {
+h1 {
   @apply text-3xl;
 }
 
-h2, .h2 {
+h2 {
   @apply text-2xl;
 }
 
-h3, .h3 {
+h3 {
   @apply text-xl;
 }
 
@@ -53,7 +53,7 @@ h3, .h3 {
 
 .copy {
   > p {
-    @apply mb-6 leading-relaxed text-secondary;
+    @apply mb-6 leading-relaxed;
   }
 
   a {

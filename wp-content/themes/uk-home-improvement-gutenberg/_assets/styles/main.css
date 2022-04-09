@@ -10,5 +10,45 @@
 @import 'partials/typography.css';
 
 @import "tailwindcss/utilities";
- 
+
 /* Custom CSS Here */
+
+@media (min-width: 1600px) {
+
+    .container-test {
+        width: calc(100% - ((100% - 1600px) / 2));
+        margin-left: calc((100% - 1600px) / 2)
+
+    }
+
+}
+
+.skew-left { 
+    width: 0;
+    height: 0;
+    border-top: 100px solid #fff;
+    border-right: 100px solid transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.triangle-left { 
+    width: 0;
+    height: 0;
+    border-top: 250px solid #AEDBDD;
+    border-right: 250px solid transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.triangle-right { 
+    width: 0;
+    height: 0;
+    border-bottom: 180px solid #16A3B8;
+    border-right: 180px solid transparent;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}

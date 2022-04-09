@@ -5,6 +5,8 @@
 --------------------------------------------------- */
 
 form {
+  @apply py-6;
+
   input[type="text"],
   input[type="password"],
   input[type="email"],
@@ -23,24 +25,6 @@ form {
   select[multiple],
   textarea {
     @apply border-gray-300 rounded shadow-sm;
-  }
-
-  .searchform {
-    border: 2px solid #CACACA;
-  }
-
-  #searchbox {
-    border: none;
-    border-radius: 0;
-  }
-
-  #searchsubmit {
-    background-color: white;
-    background-image: url("/wp-content/themes/uk-home-improvement/_resources/images/arrow-r.svg");
-    background-size: 23px 23px;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 42px;
   }
 
   textarea {

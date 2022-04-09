@@ -16,7 +16,7 @@ module.exports = {
       "4xl": "1900px",
     },
     fontFamily: {
-      sans: ["Source Sans Pro", "sans-serif"],
+      sans: ["Roboto", "sans-serif"],
     },
     filter: {
       none: "none",
@@ -25,14 +25,14 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          light: "#eee",
-          DEFAULT: "#ccc",
-          dark: "#666",
+          light: "#AEDBDD",
+          DEFAULT: "#AEDBDD",
+          dark: "#16A3B8",
         },
         secondary: {
-          light: "#f83",
-          DEFAULT: "#d0dfe5",
-          dark: "#c0ced3",
+          light: "#F4F4F4",
+          DEFAULT: "#363A3E",
+          dark: "#363A3E",
         },
       },
       spacing: {

@@ -6,11 +6,11 @@
 var iconAngleUp =
   "<svg class='icon icon-angle-up'><use xlink:href='" +
   themeURL.themeURL +
-  "/_resources/images/icons-sprite.svg#icon-angle-up'></use></svg>";
+  "/_assets/images/icons-sprite.svg#icon-angle-up'></use></svg>";
 var iconAngleDown =
   "<svg class='icon icon-angle-down'><use xlink:href='" +
   themeURL.themeURL +
-  "/_resources/images/icons-sprite.svg#icon-angle-down'></use></svg>";
+  "/_assets/images/icons-sprite.svg#icon-angle-down'></use></svg>";
 
 // // Copy primary and secondary menus to .mob-nav element
 var mobNav = document.querySelector(".mob-nav .scroll-container");
@@ -21,7 +21,7 @@ closeBtn.setAttribute("class", "mob-nav-close");
 closeBtn.innerHTML =
   "<svg class='icon icon-times'><use xlink:href='" +
   themeURL.themeURL +
-  "/_resources/images/icons-sprite.svg#icon-times'></use></svg>";
+  "/_assets/images/icons-sprite.svg#icon-times'></use></svg>";
 mobNav.insertAdjacentElement("beforeend", closeBtn);
 
 // Add dropdown arrow to links with sub-menus
