@@ -55,17 +55,11 @@
       {% elseif categories %}
 
           <div class="flex flex-wrap content-center w-full md:mr-4 md:w-6/12 hero-left">
-          <p class="h1xl">{{term.title}}</p>
-          {% if single %}
-            <p class="h1xl">{{term.name}}</p>
-          {% else %}
-            <p class="h1xl">{{post.title}}</p>
-          {% endif %}
+            <p class="block w-full uppercase h2 text-zinc-500">{{preHeading}}</p>
+            <p class="h1xl">{{heading}}</p>
           </div>
 
       {% else %}
-
-      
 
         {# Other Posts / Pages - Hero Block #}
         {% if post.get_field('hero_title_options') == "custom" %}
@@ -78,8 +72,8 @@
         {% else %}
 
           <div class="flex flex-wrap content-center w-full md:mr-4 md:w-6/12 hero-left">
-            <p class="h1xl">{{post.title}}</p>
-            <p class="sub-title">{{post.content|truncate(30|striptags)}}</p>
+            <p class="block w-full uppercase h2 text-zinc-500">{{preHeading}}</p>
+            <p class="h1xl">{{heading}}</p>
           </div>
 
         {% endif %}   

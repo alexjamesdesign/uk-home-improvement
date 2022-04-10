@@ -1,5 +1,12 @@
 {% extends '_layout/base.twig' %}
 
+{% block hero %}
+	{% include '_blocks/hero.twig' with { 
+		preHeading: "Category",
+		heading: term.name,
+	} %}
+{% endblock %}
+
 {% block content %}
 
 	{# News Index - Variant 2 #}
