@@ -46,6 +46,8 @@ add_filter( 'allowed_block_types_all', 'filter_allowed_block_types_when_post_pro
 
 add_filter( 'timber/acf-gutenberg-blocks-data/hero', function( $context ){
   $context['featured_image'] = get_the_post_thumbnail_url();
+  $context['featured_image'] = get_the_post_thumbnail_url();
+  $context['post'] = new Timber\Post();
   return $context;
 } );
 

@@ -64,7 +64,13 @@
 				{% include "_layout/header.twig" %}
 			{% endblock %}
 
-			{% block content %}{% endblock %}
+			{% block hero %}
+				{% include "_blocks/hero.twig" %}
+			{% endblock %}
+
+			<div class="container my-8">
+				{% block content %}{% endblock %}
+			</div>
 
 			{% block footer %}
 				{% include "_layout/footer.twig" %}

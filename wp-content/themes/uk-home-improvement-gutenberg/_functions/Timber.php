@@ -46,13 +46,24 @@
         $context['secondaryMenu'] = new Timber\Menu('Secondary Menu');
       }
       $context['footerMenu'] = new Timber\Menu('Footer Menu');
+
+      $postArgs = array(
+        'posts_per_page' => 1,
+        'post_type'   => 'post'
+      );
+       
+      $context['latestpost'] = new Timber\PostQuery( $postArgs );
+
+      $context['term'] = new Timber\Term();
+      
       return $context;
     }
 
     public function themeSupports() {
       add_theme_support( 'post-thumbnails' );
       add_theme_support( 'menus' );
-    }	
+    }
+
   }
 
 new newSite();

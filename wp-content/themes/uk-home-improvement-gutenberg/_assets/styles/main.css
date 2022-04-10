@@ -43,12 +43,50 @@
     top: 0;
 }
 
-.triangle-right { 
+.triangle-left-bottom { 
     width: 0;
     height: 0;
-    border-bottom: 180px solid #16A3B8;
-    border-right: 180px solid transparent;
+    border-bottom: 120px solid #16A3B8;
+    border-right: 120px solid transparent;
     position: absolute;
     left: 0;
     bottom: 0;
+}
+
+.rectangle-top {
+    width: 120px;
+    height: 15px;
+    background: #AEDBDD;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.rectangle-left {
+    width: 15px;
+    height: 120px;
+    background: #AEDBDD;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+@media (min-width: 1000px) { 
+    .triangle-right-bottom { 
+        width: 0;
+        height: 0;
+        border-bottom: 390px solid #16A3B8;
+        border-left: 390px solid transparent;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+
+
+.hero {
+    background-image: url("/wp-content/themes/uk-home-improvement-gutenberg/_assets/images/pattern.png");
+    background-size: 400px 400px;
+    background-repeat: repeat;
 }

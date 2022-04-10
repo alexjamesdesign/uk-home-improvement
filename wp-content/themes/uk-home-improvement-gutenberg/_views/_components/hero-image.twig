@@ -1,0 +1,27 @@
+<div class="relative w-full mb-4 md:block md:w-6/12 md:mb-0 md:ml-4 hero-image">
+          
+    <span class="rectangle-top"></span>
+    <span class="rectangle-left"></span>
+
+    {# Hero Image - Desktop Only #}
+    {% include "_components/picture.twig" with {
+    pictureClasses: "",
+    source: image,
+    lazyload: false,
+    breakpoints: {
+        "1px" : {
+        w: 960,
+        h: 500,
+        crop: 'center'
+        },
+    },
+    img: {
+        classes: '',
+        w: 960,
+        h: 500,
+        crop: 'center',
+    }
+    }
+    %}
+
+</div>
