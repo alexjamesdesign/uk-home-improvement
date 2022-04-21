@@ -47,7 +47,14 @@
 
           <div class="flex flex-wrap content-center w-full md:mr-4 md:w-6/12 hero-left">
             <p class="h1xl">{{post.title}}</p>
-            <p class="sub-title">{{post.content|truncate(30|striptags)}}</p>
+            {{post.content|truncate(30|striptags|raw)}}
+            
+            {% include "_components/_atoms/button.twig" with {
+              buttonText : "Read More",
+              buttonLink : post.link,
+              buttonIcon : "arrow-right",
+              buttonClasses : "block pt-3",
+            } %}
           </div>
 
         {% endfor %}
@@ -80,12 +87,6 @@
 
       {% endif %}
    
-    {# Hero Image - Mobile Only #}
-    {# <div class="top-0 right-[20px] hidden w-full md:block md:absolute md:w-6/12 h-96 hero-image">
-      <span class="rectangle-top"></span>
-      <span class="rectangle-left"></span>
-    </div> #}
-
     </div>
 
   </div>

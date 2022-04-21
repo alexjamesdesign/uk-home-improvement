@@ -71,6 +71,16 @@
     top: 0;
 }
 
+.card-arrow { 
+    width: 0;
+    height: 0;
+    border-bottom: 60px solid #16A3B8;
+    border-left: 60px solid transparent;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
 @media (min-width: 1000px) { 
     .triangle-right-bottom { 
         width: 0;
