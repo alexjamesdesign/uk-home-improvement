@@ -56,13 +56,37 @@ h3, .h3 {
 
 /* Copy */
 
+.wp-block-spacer {
+  display: none;
+}
+
+p {
+  @apply text-base text-gray-600;
+}
+
 .copy {
+  .h1xl,
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    @apply mb-0 font-bold leading-snug text-secondary;
+  }
+
   > p {
-    @apply mb-6 leading-relaxed text-secondary;
+    @apply mb-2 leading-relaxed text-gray-600;
   }
 
   a {
-    @apply inline-block text-primary;
+    @apply inline-block text-primary-dark;
 
     &:hover {
       @apply underline;
