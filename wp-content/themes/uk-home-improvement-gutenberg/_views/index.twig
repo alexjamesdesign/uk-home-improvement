@@ -10,34 +10,92 @@
 {% block content %}
 
 	{# News Index - Variant 2 #}
-	<div class="container py-6 md:py-10">
-		<div class="flex flex-col w-full lg:flex-row">
 
-			<div class="order-1 w-full md:w-3/4 md:px-4 lg:px-6 md:order-2">
-				<div class="flex flex-wrap">
-					{% for post in posts %}
-						{% include "_components/_atoms/card.twig" with {
-							category : "Category",
-							title : post.title,
-							snippet : "Snippet",
-						} %}
-					{% endfor %}
-				</div>
-			</div>
-      
-			<div class="p-6 mb-6 bg-gray-200 border border-gray-300 rounded-lg lg:p-8 md:mb-8">
-				<span class="block mb-4 tracking-wider text-black uppercase">Categories</span>
+	<div class="w-full p-6 bg-white border border-gray-300 rounded-lg lg:py-6 lg:pl-3 lg:px-0 md:mb-8">
+		<span class="block mb-4 tracking-wider text-center text-black uppercase h2">Categories</span>
 
-				<ul>
+		{# <div class="embla">
+			<div class="embla__viewport">
+				<form class="embla__container latest-news__filters__select" name="cat" role="search" method="get" autocomplete="off" action="{{ function('get_permalink', function('get_queried_object_id', current_term )) }}">
 					{% for cat in categories %}
-						{# @INTEGRATION - check your permalinks to confirm this URL path is correct #}
-						<li>
-							<a href="{{ cat.link }}" class="block w-full py-1 text-black hover:text-gray-500 focus:text-gray-500">{{ cat.name }}</a>
-						</li>
+						
+						<a value='{{cat.id}}' class="flex-shrink-0 px-5 py-2 mr-3 text-black rounded-full news-filter bg-primary hover:text-gray-500 focus:text-gray-500">{{ cat.name }}</a>
+						
 					{% endfor %}
-				</ul>
+				</form>
 			</div>
-		</div>
+		</div> #}
+
+		<form role="search" method="get" autocomplete="off" action="{{ function('get_permalink', function('get_queried_object_id', current_term )) }}">
+
+            <div class="latest-news__filters__select">
+    
+                <select class="news-filter" name="cat">
+        
+                    <option value="default">Select by category</option>
+        
+                    {% for cat in categories %}
+            
+                        <option value='{{cat.id}}'>{{cat.name}}</option>
+            
+                    {% endfor %}
+
+                </select>
+
+            </div>
+
+            <noscript>
+
+            <button type="submit" class="button">Search</button>
+
+            </noscript>
+
+        </form>
+
 	</div>
+
+	{# <div>
+
+	{% for post in posts %}
+		{% include "_components/_atoms/card.twig" with {
+			category : "Category",
+			cardLink: function("get_permalink", post.ID),
+			title : post.title,
+			snippet : "Snippet",
+		} %}
+	{% endfor %}
+
+	</div> #}
+
+	<div class="container py-6 md:py-10 latest-blocks latest-blocks--full">
+    
+        <div class="flex flex-wrap w-full gap-4 latest-blocks__container">
+
+			<noscript>
+
+			{% for post in posts %}
+				{% include "_components/_atoms/card.twig" with {
+					category : "Category",
+					cardLink: function("get_permalink", post.ID),
+					title : post.title,
+					snippet : "Snippet",
+				} %}
+			{% endfor %}
+
+			</noscript> 
+
+        </div>
+
+    </div>
+
+	<section class="flex items-center justify-center mt-8 mb-4 latest-news__pagination">
+
+		<div class="latest-news__pagination__nav">
+
+			{% include "_components/pagination.twig" %}
+		
+		</div>
+
+	</section>
 
 {% endblock %}

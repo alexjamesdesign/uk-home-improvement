@@ -10,9 +10,23 @@
 
 {% block content %}
 
-	<div class="grid grid-cols-1 gap-8 copy">
+	{# <div class="container flex flex-col my-8 lg:flex-row lg:my-16 lg:space-x-12"> #}
+	
+	<aside class="sticky top-0 z-10 flex justify-center w-full p-3 bg-gray-100">
+		{% include "_components/sidebar--blog.twig" %}
+	</aside>
 
-		{{post.content}}
+		<div class="container relative w-full lg:lg:my-16">
+
+		<main class="flex flex-wrap content-center justify-center w-full">
+
+			<article class="w-9/12 copy">
+
+				{{post.content}}
+
+			</article>
+
+		</main>
 
 	</div>
 

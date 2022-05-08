@@ -1,0 +1,14 @@
+<div class="flex flex-wrap justify-center">
+
+    <h2 class="w-full text-center uppercase">Categories</h2>
+
+    <select>
+        {% for cat in categories %}
+            {# @INTEGRATION - check your permalinks to confirm this URL path is correct #}
+            <option>
+                <span href="/category/{{ cat.slug }}/" class="block">{{ cat.name }}</span>
+            </option>
+        {% endfor %}
+    </select>
+
+</div>

@@ -1,11 +1,11 @@
 <?php
+    $context = Timber::get_context();
 
-$context = Timber::context();
-$context['posts'] = new Timber\PostQuery();
+    $args = array(
+        'taxonomy' => 'category',
+        'hide_empty' => false,
+    );
 
-$context['categories'] = get_categories( array(
-    'orderby' => 'name',
-    'order'   => 'ASC'
-) );
+    $context['categories'] = Timber::get_terms($args);
 
-Timber::render( [ 'index.twig' ], $context );
+    Timber::render( [ 'index.twig' ], $context );
