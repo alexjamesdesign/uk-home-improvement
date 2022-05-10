@@ -1,0 +1,24 @@
+<div class="sticky top-0 z-10 flex justify-center w-full py-3">
+
+    <div class="flex flex-wrap justify-center overflow-hidden">
+
+        <div class="w-full p-6 bg-white border border-gray-300 rounded-lg lg:py-6 lg:pl-3 lg:px-0 md:mb-8">
+            <span class="block mb-4 tracking-wider text-center text-black uppercase h2">Categories</span>
+
+            <div class="embla">
+                <div class="embla__viewport">
+                    <form class="embla__container latest-news__filters__select" name="cat" role="search" method="get" autocomplete="off" action="{{ function('get_permalink', function('get_queried_object_id', current_term )) }}">
+                        {% for cat in categories %}
+                            
+                            <a href='{{site.site_url}}/?cat={{cat.term_id}}' class="flex-shrink-0 px-5 py-2 mr-3 text-black rounded-full news-filter bg-primary hover:text-gray-500 focus:text-gray-500">{{ cat.name }}</a>
+                            
+                        {% endfor %}
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+</div>

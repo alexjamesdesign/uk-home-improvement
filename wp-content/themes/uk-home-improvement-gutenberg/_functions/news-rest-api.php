@@ -50,12 +50,17 @@ function rest_api_news($request) {
         } else {
             $img = '<img class="object-cover w-full h-32 lazy object-position-center lg:h-64 lazyload" data-src="' . $fallback . '" alt="title" width="600" height="200" />';
         }
+        
+        // Get category Name
+        $category = get_the_category();
+        $firstCategory = $category[0]->cat_name;
 
         array_push($resultsArray, array(
             'title' => get_the_title(),
             'img' => $img,
             'date' => get_the_date(),
             'link' => get_the_permalink(),
+            'cat' => $firstCategory,
             'excerpt' => wp_trim_words( get_the_content(), 20 ),
         ));
     }

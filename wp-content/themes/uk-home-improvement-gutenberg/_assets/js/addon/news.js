@@ -20,6 +20,7 @@ var pageNumber = 1,
                                     e.img +
                                 '</div>' +
                                 '<div class="p-6 grow-1">' +
+                                    '<span class="block mb-2 leading-tight text-black uppercase text-md md:text-md">' + e.cat + '</span>' +
                                     '<span class="block mb-4 text-lg font-bold leading-tight text-black md:text-xl">'+ e.title + '</span>' +
                                     '<span class="text-sm">' + e.excerpt + '</span>' +
                                 '</div>' +
@@ -48,7 +49,26 @@ loadMore.addEventListener("click", function (e) {
 var newsFilter = document.querySelector(".news-filter");
 newsFilter.addEventListener("change", function () {
     (pageNumber = 1), (newsDiv.innerHTML = ""), fetchNext();
+    fetchNews(pageNumber, stringMatch[0])
 });
+
+
 var fetchNext = function () {
     newsFilter.value.length <= 3 ? fetchNews(pageNumber, newsFilter.value) : fetchNews(pageNumber);
 };
+
+//if query string has cat in it do this else do this
+
+if (window.location.search) {
+    //possible more modern ways of doing this but this method works without a polyfill
+    var stringSearch = window.location.search
+    var stringMatch = stringSearch.match(/(\d+)/)
+
+    //change the select
+    newsFilter.value = stringMatch[0]
+
+    //trigger it
+    fetchNews(pageNumber, stringMatch[0])
+} else {
+    fetchNews(pageNumber);
+}
