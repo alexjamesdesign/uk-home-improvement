@@ -1,4 +1,4 @@
-<header class="relative w-full pt-10 overflow-hidden lg:pt-10 lg:pb-10 lg:border-b-8 lg:border-primary-dark">
+<header class="relative w-full pt-10 lg:pt-10 lg:pb-10 lg:border-b-8 lg:border-primary-dark">
 
 	<img class="header-shape" src="{{ theme.link }}/_assets/images/header-shape.svg" />
 
@@ -55,7 +55,7 @@
 								<li class="{{item.class}}">
 									<a href="{{item.link}}" class="relative block p-4 hover:text-black focus:text-black {{ item.current ? 'text-red-500' }}">{{item.name}}</a>
 									{% if item.children %}
-										<ul class="sub-menu">
+										<ul class="z-30 sub-menu">
 											{% for child in item.children %}
 												<li class="{{child.class}}">
 													<a href="{{child.link}}" class="block p-4 text-gray-500 hover:text-black focus:text-black">{{child.name}}</a>

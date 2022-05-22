@@ -5,6 +5,7 @@
 		preHeading: "Article",
 		heading: post.title,
 		imageComponent: "tall",
+		image: post.thumbnail.src,
 	} %}
 {% endblock %}
 
@@ -16,7 +17,7 @@
 	{% include '_components/filter-non-rest.twig' %}
 	
 
-	<div class="container relative w-full lg:lg:my-16">
+	<div class="container relative w-full">
 
 		<main class="flex flex-wrap content-center justify-center w-full">
 

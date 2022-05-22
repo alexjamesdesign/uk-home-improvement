@@ -39,7 +39,7 @@
 
           {# Homepage - Image from latest post #} 
           {% include "_components/hero-image.twig" with {
-            image : Image(post.thumbnail.src).src|resize(400, 200)|tojpg | default(theme.link~"/_assets/images/hero-fallback.jpg"),
+            image : image,
             imageComponent : "tall",
           } %}
 
@@ -49,7 +49,7 @@
         
         {# Other Pages - Image from featured image OR fallback #} 
         {% include "_components/hero-image.twig" with {
-            image : Image(post.thumbnail.src).src|resize(400, 200)|tojpg | default(theme.link~"/_assets/images/hero-fallback.jpg"),
+            image : Image(post.thumbnail.src)|resize(400, 200)|tojpg | default(theme.link~"/_assets/images/hero-fallback.jpg"),
             imageComponent : "short",
           } %}
 

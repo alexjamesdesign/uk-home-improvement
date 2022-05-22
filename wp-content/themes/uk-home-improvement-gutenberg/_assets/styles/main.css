@@ -32,7 +32,7 @@
     .header-shape {
         position: absolute;
         right: 0;
-        top: 0;
+        bottom: 0;
         display: block;
     }
 }
@@ -131,4 +131,18 @@
     background-size: 400px 400px;
     background-repeat: repeat; 
     @apply bg-secondary-light;*/
+}
+
+.btn.load-more {
+    @apply px-6 font-black text-white uppercase rounded-full bg-primary-dark;
+}
+
+.white-bg-top:before {
+    content:"";
+    width: 100%;
+    height: 80px;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
