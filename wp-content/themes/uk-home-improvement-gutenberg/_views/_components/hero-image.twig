@@ -1,27 +1,74 @@
-<div class="relative w-full mb-4 md:block md:w-6/12 md:mb-0 md:ml-4 hero-image">
           
-    <span class="rectangle-top"></span>
-    <span class="rectangle-left"></span>
+{# <span class="rectangle-top"></span>
+<span class="rectangle-left"></span> #}
 
-    {# Hero Image - Desktop Only #}
+{# Hero Image - Desktop Only #}
+
+{% if imageComponent == "tall" %}
     {% include "_components/picture.twig" with {
-    pictureClasses: "",
-    source: image,
-    lazyload: false,
-    breakpoints: {
-        "1px" : {
-        w: 960,
-        h: 500,
-        crop: 'center'
+        pictureClasses: "w-full w-full h-full",
+        source: image,
+        lazyload: false,
+        breakpoints: {
+            "1024px" : {
+                w: 1500,
+                h: 1000,
+                crop: 'center'
+            },
+            "768px" : {
+                w: 1200,
+                h: 800,
+                crop: 'center'
+            },
+            "600px" : {
+                w: 900,
+                h: 500,
+                crop: 'center'
+            },
+            "1px" : {
+                w: 700,
+                h: 400,
+                crop: 'center'
+            },
         },
-    },
-    img: {
-        classes: '',
-        w: 960,
-        h: 500,
-        crop: 'center',
-    }
-    }
+        img: {
+            classes: 'w-full h-full object-center object-cover',
+            w: 960,
+            h: 500,
+            crop: 'center',
+        }
+        }
+    %}
+{% else %}
+
+{% include "_components/picture.twig" with {
+        pictureClasses: "w-full w-full h-full",
+        source: image,
+        lazyload: false,
+        breakpoints: {
+            "1024px" : {
+                w: 1500,
+                h: 500,
+                crop: 'center'
+            },
+            "600px" : {
+                w: 900,
+                h: 500,
+                crop: 'center'
+            },
+            "1px" : {
+                w: 700,
+                h: 400,
+                crop: 'center'
+            },
+        },
+        img: {
+            classes: 'w-full h-full object-center object-cover',
+            w: 960,
+            h: 200,
+            crop: 'center',
+        }
+        }
     %}
 
-</div>
+{% endif %}

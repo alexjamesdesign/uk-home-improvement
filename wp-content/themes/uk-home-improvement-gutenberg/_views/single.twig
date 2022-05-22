@@ -2,8 +2,9 @@
 
 {% block hero %}
 	{% include '_blocks/hero.twig' with { 
-		preHeading: "Post",
+		preHeading: "Article",
 		heading: post.title,
+		imageComponent: "tall",
 	} %}
 {% endblock %}
 

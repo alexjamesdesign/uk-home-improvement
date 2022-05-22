@@ -10,24 +10,38 @@
   SupportsMultiple: false
 #}
 
-<div class="relative w-full bg-center bg-cover py-14 hero">
+<div class="relative md:py-10 hero-section bg-secondary-light">
 
-	<span class="triangle-left"></span>
   <span class="triangle-left-bottom"></span>
-  <span class="triangle-right-bottom"></span>
+  <span class="triangle-right-top"></span>
 
-  <div class="relative w-full">
+  <div class="relative z-20 flex flex-col-reverse flex-wrap w-full hero">
 
-    <div class="container flex flex-wrap content-start md:content-between md:flex-row-reverse md:flex-nowrap">
+    {# <span class="triangle-left"></span> #}
+    
+    {# <span class="triangle-right-bottom"></span> #}
 
-      {% if fn('is_front_page') %}
+    <div class="container">
+
+      <div class="w-full py-8 text-white md:w-5/12 xl:w-2/5 md:pr-16 lg:w-4/12 lg:py-16">
+
+        {% include "_components/hero-text.twig" %}
+
+      </div>
+
+    </div>
+
+    <div class="w-full h-full max-h-full overflow-hidden md:top-0 md:right-0 md:w-7/12 md:mx-0 md:absolute lg:w-8/12 xl:w-3/5 md:block hero-image">
       
+      {% if imageComponent == "tall" %}
+          
         {% for post in latestpost %}
 
-         {# Homepage - Image from latest post #} 
-         {% include "_components/hero-image.twig" with {
-           image : Image(post.thumbnail.src).src|resize(400, 200)|tojpg | default(theme.link~"/_assets/images/hero-fallback.jpg"),
-         } %}
+          {# Homepage - Image from latest post #} 
+          {% include "_components/hero-image.twig" with {
+            image : Image(post.thumbnail.src).src|resize(400, 200)|tojpg | default(theme.link~"/_assets/images/hero-fallback.jpg"),
+            imageComponent : "tall",
+          } %}
 
         {% endfor %}
       
@@ -35,61 +49,19 @@
         
         {# Other Pages - Image from featured image OR fallback #} 
         {% include "_components/hero-image.twig" with {
-           image : Image(post.thumbnail.src).src|resize(400, 200)|tojpg | default(theme.link~"/_assets/images/hero-fallback.jpg"),
-         } %}
-  
-      {% endif %}  
+            image : Image(post.thumbnail.src).src|resize(400, 200)|tojpg | default(theme.link~"/_assets/images/hero-fallback.jpg"),
+            imageComponent : "short",
+          } %}
 
-      {% if fn('is_front_page') %}
-        
-        {# Homepage - latest post #}
-        {% for post in latestpost %}
+      {% endif %} 
 
-          <div class="flex flex-wrap content-center w-full md:mr-4 md:w-6/12 hero-left">
-            <p class="h1xl">{{post.title}}</p>
-            {{post.content|truncate(30|striptags|raw)}}
-            
-            {% include "_components/_atoms/button.twig" with {
-              buttonText : "Read More",
-              buttonLink : post.link,
-              buttonIcon : "arrow-right",
-              buttonClasses : "block pt-3",
-            } %}
-          </div>
-
-        {% endfor %}
-
-      {% elseif categories %}
-
-          <div class="flex flex-wrap content-center w-full md:mr-4 md:w-6/12 hero-left">
-            <p class="block w-full uppercase h2 text-zinc-500">{{preHeading}}</p>
-            <p class="h1xl">{{heading}}</p>
-          </div>
-
-      {% else %}
-
-        {# Other Posts / Pages - Hero Block #}
-        {% if post.get_field('hero_title_options') == "custom" %}
-
-          <div class="flex flex-wrap content-center w-full md:mr-4 md:w-6/12 hero-left">
-            <p class="h1xl">{{post.custom_title}}</p>
-            <p class="sub-title">{{post.content|truncate(30|striptags)}}</p>
-          </div>
-
-        {% else %}
-
-          <div class="flex flex-wrap content-center w-full md:mr-4 md:w-6/12 hero-left">
-            <p class="block w-full uppercase h2 text-zinc-500">{{preHeading}}</p>
-            <p class="h1xl">{{heading}}</p>
-          </div>
-
-        {% endif %}   
-
-      {% endif %}
-   
     </div>
+    
+  </div>
 
+  {# Space for an Ad #} 
+  <div class="container relative z-20 pb-10 md:pb-0 md:pt-10">
+    <div class="bg-gray-400 h-36"></div>
   </div>
 
 </div>
-

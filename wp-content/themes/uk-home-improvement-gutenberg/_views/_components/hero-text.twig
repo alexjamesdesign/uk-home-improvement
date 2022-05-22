@@ -1,0 +1,46 @@
+{% if fn('is_front_page') %}
+      
+      {# Homepage - latest post #}
+      {% for post in latestpost %}
+
+        <div class="flex flex-wrap content-center w-full md:pl-4 hero-left">
+          <p class="h1xl">{{post.title}}</p>
+          {{post.content|truncate(30|striptags|raw)}}
+          
+          {% include "_components/_atoms/button.twig" with {
+            buttonText : "Read More",
+            buttonLink : post.link,
+            buttonIcon : "arrow-right",
+            buttonClasses : "block pt-3",
+          } %}
+        </div>
+
+      {% endfor %}
+
+    {% elseif categories %}
+
+        <div class="flex flex-wrap content-center w-full md:pl-4 hero-left">
+          <p class="block w-full mb-0 uppercase h2 text-zinc-500">{{preHeading}}</p>
+          <p class="h1xl">{{heading}}</p>
+        </div>
+
+    {% else %}
+
+      {# Other Posts / Pages - Hero Block #}
+      {% if post.get_field('hero_title_options') == "custom" %}
+
+        <div class="flex flex-wrap content-center w-full md:pl-4 hero-left">
+          <p class="h1xl">{{post.custom_title}}</p>
+          <p class="sub-title">{{post.content|truncate(30|striptags)}}</p>
+        </div>
+
+      {% else %}
+
+        <div class="flex flex-wrap content-center w-full md:pl-4 md:mr-4 md:w-5/12 hero-left">
+          <p class="block w-full mb-0 uppercase h2 text-zinc-500">{{preHeading}}</p>
+          <p class="h1xl">{{heading}}</p>
+        </div>
+
+      {% endif %}   
+
+    {% endif %}

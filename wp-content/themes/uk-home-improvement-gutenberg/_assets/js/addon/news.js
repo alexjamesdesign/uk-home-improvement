@@ -15,7 +15,7 @@ var pageNumber = 1,
                 e.forEach(function (e) {
                     t.push(
                         '<div class="flex items-stretch w-full md:w-[49%] lg:w-[32%]">' + 
-                            '<a href="' + e.link + '" class="relative flex flex-wrap justify-start bg-blue-100 border-b-4 group border-b-primary-dark hover:bg-blue-300 focus:bg-blue-300">' +
+                            '<a href="' + e.link + '" class="relative flex flex-wrap justify-start bg-blue-100 border-b-4 group border-b-primary-dark hover:bg-gray-200 focus:bg-gray-200">' +
                                 '<div class="relative w-full overflow-hidden grow-0">' +
                                     e.img +
                                 '</div>' +

@@ -24,6 +24,19 @@
 
 }
 
+.header-shape {
+    display: none;
+}
+
+@media (min-width: 1025px) { 
+    .header-shape {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+    }
+}
+
 .skew-left { 
     width: 0;
     height: 0;
@@ -42,34 +55,51 @@
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 10;
 }
 
 .triangle-left-bottom { 
     width: 0;
     height: 0;
-    border-bottom: 120px solid #16A3B8;
+    border-bottom: 120px solid #AEDBDD;
     border-right: 120px solid transparent;
     position: absolute;
     left: 0;
     bottom: 0;
+    z-index: 10;
 }
 
-.rectangle-top {
-    width: 120px;
-    height: 15px;
-    background: #AEDBDD;
+.triangle-right-top { 
+    width: 0;
+    height: 0;
+    border-top: 320px solid #16A3B8;
+    border-left: 320px solid transparent;
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
+    z-index: 10;
 }
 
-.rectangle-left {
-    width: 15px;
-    height: 120px;
-    background: #AEDBDD;
-    position: absolute;
-    left: 0;
-    top: 0;
+
+@media (min-width: 768px) { 
+    .rectangle-top {
+        width: 120px;
+        height: 15px;
+        background: #AEDBDD;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+@media (min-width: 768px) { 
+    .rectangle-left {
+        width: 15px;
+        height: 120px;
+        background: #AEDBDD;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
 }
 
 .card-arrow { 
@@ -97,7 +127,8 @@
 
 
 .hero {
-    background-image: url("/wp-content/themes/uk-home-improvement-gutenberg/_assets/images/pattern.png");
+    /* background-image: url("/wp-content/themes/uk-home-improvement-gutenberg/_assets/images/pattern.png");
     background-size: 400px 400px;
-    background-repeat: repeat;
+    background-repeat: repeat; 
+    @apply bg-secondary-light;*/
 }
