@@ -3,7 +3,7 @@
       {# Homepage - latest post #}
       {% for post in latestpost %}
 
-        <div class="flex flex-wrap content-center w-full md:pl-4 hero-left">
+        <div class="flex flex-wrap content-center w-full animate md:pl-4 hero-left" data-animate="fadeIn">
           <p class="h1xl">{{post.title}}</p>
           {{post.content|truncate(30|striptags|raw)}}
           
@@ -19,9 +19,9 @@
 
     {% elseif categories %}
 
-        <div class="flex flex-wrap content-center w-full md:pl-4 hero-left">
+        <div class="flex flex-wrap content-center w-full animate md:pl-4 hero-left" data-animate="fadeIn">
           <p class="block w-full mb-0 uppercase h2 text-secondary">{{preHeading}}</p>
-          <p class="h1xl">{{heading}}</p>
+          <p class="h1xl">{{heading|capitalize}}</p>
         </div>
 
     {% else %}
@@ -29,14 +29,14 @@
       {# Other Posts / Pages - Hero Block #}
       {% if post.get_field('hero_title_options') == "custom" %}
 
-        <div class="flex flex-wrap content-center w-full md:pl-4 hero-left">
+        <div class="flex flex-wrap content-center w-full animate md:pl-4 hero-left" data-animate="fadeIn">
           <p class="h1xl">{{post.custom_title}}</p>
           <p class="sub-title">{{post.content|truncate(30|striptags)}}</p>
         </div>
 
       {% else %}
 
-        <div class="flex flex-wrap content-center w-full md:pl-4 md:mr-4 md:w-5/12 hero-left">
+        <div class="flex flex-wrap content-center w-full md:pl-4 md:mr-4 hero-left animate" data-animate="fadeIn">
           <p class="block w-full mb-0 uppercase h2 text-zinc-500">{{preHeading}}</p>
           <p class="h1xl">{{heading}}</p>
         </div>

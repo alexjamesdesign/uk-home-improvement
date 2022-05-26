@@ -26,7 +26,7 @@ Desktop Navs
 
     .current-menu-item > a,
     .current-menu-parent > a {
-      @apply text-red-500;
+      @apply text-primary-dark;
     }
   }
 

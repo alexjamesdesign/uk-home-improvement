@@ -19,7 +19,7 @@
 		
 		<div class="container py-6 md:py-8">
 		
-			<div class="flex flex-wrap w-full gap-4">
+			<div class="grid-parent">
 			
 				{% for post in posts %}
 					{% include "_components/_atoms/card.twig" with {
@@ -36,7 +36,7 @@
 		
 	</div>
 
-	<section class="flex items-center justify-center mt-8 mb-4">
+	<section class="flex items-center justify-center mb-4">
 
 		{% include "_components/pagination.twig" %}
 

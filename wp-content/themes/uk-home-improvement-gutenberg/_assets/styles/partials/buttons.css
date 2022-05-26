@@ -29,3 +29,11 @@ Buttons
     @apply text-white bg-black;
   }
 }
+
+.wpcf7-form p {
+  @apply pt-2 text-secondary-dark;
+}
+
+.wpcf7-submit {
+  @apply flex flex-shrink-0 px-5 py-2 font-bold text-white uppercase rounded-full bg-primary-dark hover:text-gray-500 focus:text-gray-500;
+}

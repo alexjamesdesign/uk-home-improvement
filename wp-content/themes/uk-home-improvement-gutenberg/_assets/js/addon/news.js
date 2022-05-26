@@ -14,7 +14,7 @@ var pageNumber = 1,
                 var t = [];
                 e.forEach(function (e) {
                     t.push(
-                        '<div class="flex items-stretch w-full md:w-[49%] lg:w-[32%]">' + 
+                        '<div class="flex items-stretch">' + 
                             '<a href="' + e.link + '" class="relative flex flex-wrap justify-start bg-white  border-b-4 group border-b-primary-dark hover:bg-gray-200 focus:bg-gray-200">' +
                                 '<div class="relative w-full overflow-hidden grow-0">' +
                                     e.img +
@@ -34,7 +34,7 @@ var pageNumber = 1,
                 }),
                     6 <= t.length ? (paginationDiv.hidden = !1) : (paginationDiv.hidden = !0);
                 var n = document.createElement("div");
-                (n.className = "flex flex-wrap w-full gap-6 latest-blocks__container"), (n.innerHTML = t.join(" ")), newsDiv.appendChild(n);
+                (n.className = "grid-parent"), (n.innerHTML = t.join(" ")), newsDiv.appendChild(n);
             })
             .catch(function (e) {
                 paginationDiv.innerHTML = '<a href="#" class="load-more">No more posts</a>';

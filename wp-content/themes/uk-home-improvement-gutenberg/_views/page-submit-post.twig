@@ -1,0 +1,39 @@
+{% extends '_layout/base.twig' %}
+
+
+{% block hero %}
+	{% include '_blocks/hero.twig' with { 
+		preHeading: "Category",
+		heading: "Submit Post",
+		imageComponent: "short",
+		image: term.thumbnail.src,
+	} %}
+{% endblock %}
+
+{% block content %}
+
+	<div class="container lg:flex">
+
+		<main class="lg:w-6/12 lg:pr-6">
+
+            <article class="copy">
+
+                {{post.content}}
+
+            </article>
+
+        </main>
+
+        <aside class=" lg:w-6/12">
+			<p class="h2">Contact Us</p>
+			<p>If you'd like to get in touch with us here at UK Home Improvement, please use the form below:</p>
+
+			<div class="sticky top-[20px] p-4 mt-4 copy bg-primary-light">
+           		{{fn('do_shortcode','[contact-form-7 id="4420" title="UK Home Contact"]')}}
+			</div>
+        </aside>
+
+	</div>
+
+{% endblock %}
+

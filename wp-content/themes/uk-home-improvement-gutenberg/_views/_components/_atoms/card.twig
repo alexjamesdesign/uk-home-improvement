@@ -1,4 +1,4 @@
-<div class="flex items-stretch w-full md:w-[49%] lg:w-[32%]">
+<div class="flex items-stretch animate delay-{{loop.index}}" data-animate="fadeIn">
     <a href="{{ cardLink }}" class="relative flex flex-wrap justify-start bg-white border-b-4 group border-b-primary-dark focus:bg-gray-200">
         <div class="relative w-full overflow-hidden grow-0">
             <img data-src="{{ Image((post.thumbnail)).src|resize(800,390) }}" class="object-cover object-center w-full lazyload" width="800" height="390" />

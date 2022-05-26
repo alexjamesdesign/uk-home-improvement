@@ -8,6 +8,7 @@
 @import 'partials/forms.css';
 @import 'partials/mobile-nav.css';
 @import 'partials/typography.css';
+@import 'partials/animations.css';
 @import 'partials/embla.css';
 
 @import "tailwindcss/utilities";
@@ -16,7 +17,7 @@
 
 @media (min-width: 1600px) {
 
-    .container-test {
+    .container-t {
         width: calc(100% - ((100% - 1600px) / 2));
         margin-left: calc((100% - 1600px) / 2)
 
@@ -74,6 +75,17 @@
     height: 0;
     border-top: 320px solid #16A3B8;
     border-left: 320px solid transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.triangle-left-top { 
+    width: 0;
+    height: 0;
+    border-top: 320px solid #16A3B8;
+    border-right: 320px solid transparent;
     position: absolute;
     right: 0;
     top: 0;
@@ -145,4 +157,17 @@
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.grid-parent {
+    @apply grid gap-6 mb-6;
+
+    @screen md {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @screen lg {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+   
 }

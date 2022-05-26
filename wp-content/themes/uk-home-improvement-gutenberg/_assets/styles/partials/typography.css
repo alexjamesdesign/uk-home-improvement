@@ -78,11 +78,11 @@ p {
   .h5,
   h6,
   .h6 {
-    @apply mb-0 font-bold leading-snug text-secondary;
+    @apply mb-2 font-bold leading-snug text-secondary;
   }
 
   > p {
-    @apply mb-2 leading-relaxed text-gray-600;
+    @apply mb-6 leading-relaxed text-gray-600;
   }
 
   a {
@@ -91,6 +91,10 @@ p {
     &:hover {
       @apply underline;
     }
+  }
+
+  figure {
+    @apply py-6;
   }
 
   ol,

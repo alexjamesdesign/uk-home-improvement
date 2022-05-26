@@ -8,3 +8,5 @@ mob-nav--active
 mob-nav-underlay
 mob-nav-close
 current-page-ancestor
+animate
+fadeIn

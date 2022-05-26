@@ -1,6 +1,6 @@
-<div class="sticky top-[40px] lg:top-0 z-10 w-full lg:py-3 lg:pl-3 lg:px-6 md:mb-8">
+<div class="sticky top-0 z-10 w-full lg:pb-3 lg:pl-3 lg:px-6 md:mb-8">
 
-    <div class="w-full p-6 px-6 bg-white border border-gray-300 rounded-lg">
+    <div class="w-full p-6 px-6 bg-white border border-gray-300">
     
         <span class="block mb-4 tracking-wider text-center text-black uppercase h2">Categories</span>
 
@@ -16,16 +16,16 @@
             </div>
         </div> #}
 
-        <div class="flex justify-center flex-nowrap">
+        <div class="flex flex-wrap justify-center md:flex-nowrap">
 
-            <form class="flex mr-2 navbar-form" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+
+            <form role="search" method="get" id="searchform" class="flex justify-center w-full mb-2 md:mb-0 md:mr-2 md:w-auto navbar-form" action="{{ site.link }}">
                 <div class="form-group">
                     <input type="text" name="s" class="form-control search-autocomplete" placeholder="Search">
                 </div>
-                {# <button type="submit" class="fa fa-search"></button> #}
             </form>
 
-            <form class="ml-2" role="search" method="get" autocomplete="off" action="{{ function('get_permalink', function('get_queried_object_id', current_term )) }}">
+            <form class="w-full ml-2 md:w-auto" role="search" method="get" autocomplete="off" action="{{ function('get_permalink', function('get_queried_object_id', current_term )) }}">
 
                 <div class="flex justify-center latest-news__filters__select">
 
