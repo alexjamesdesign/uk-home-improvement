@@ -13,11 +13,13 @@
 
 	{# News Index - Variant 2 #}
 
+	{% if posts|length > 0 %}
+
 	<div class="relative w-full bg-secondary-light white-bg-top">
-		
+			
 		<div class="container py-6 md:py-8">
 		
-			<div class="flex flex-wrap w-full gap-6">
+			<div class="grid-parent">
 			
 				{% for post in posts %}
 					{% include "_components/_atoms/card.twig" with {
@@ -26,13 +28,31 @@
 						title : post.title,
 						snippet : "Snippet",
 					} %}
-				{% endfor %}	
+				{% endfor %}
+			
+				<div class="text-secondary">
+
+					<p class="text-black h1">No Posts</p>
+
+				</div>
 
 			</div>
 
 		</div>
-		
+	
 	</div>
+
+	{% else %}
+
+	<div class="container py-6 md:py-8">
+
+		<p class="h1">No Posts</h1>
+
+		<p>No posts have been found relating to {{search_query}}.</p>
+
+	</div>
+	
+	{% endif %}
 
 	<section class="flex items-center justify-center mt-8 mb-4">
 
