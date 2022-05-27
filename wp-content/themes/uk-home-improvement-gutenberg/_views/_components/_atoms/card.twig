@@ -7,7 +7,7 @@
         <div class="p-6 grow-1">
             <span class="block mb-2 leading-tight uppercase text-secondary text-md md:text-md">{{ post.category }}</span>
             <span class="block mb-4 text-lg font-bold leading-tight text-secondary md:text-xl">{{ post.title }}</span>
-            <span class="text-sm">{{post.content|truncate(10|striptags|raw)}}</span>
+            <span class="text-sm">{{post.content|truncate(10)|striptags|raw}}</span>
         </div>
         
         <div class="card-arrow"></div>
