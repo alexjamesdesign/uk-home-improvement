@@ -39,11 +39,11 @@ function rest_api_news($request) {
     while($results->have_posts()) {
         $results->the_post();
 
-        $image = get_the_post_thumbnail_url(get_the_ID(), 'medium');
+        $image = get_the_post_thumbnail_url(get_the_ID(), 'large');
 
         $fallbackImage = get_field('fallback_image', 'options');
 
-        $fallback = $fallbackImage['sizes']['medium'];
+        $fallback = $fallbackImage['sizes']['large'];
 
         if ($image) {
             $img = '<img class="object-cover w-full h-32 lazy object-position-center lg:h-64 lazyload" data-src="' . $image . '" alt="title" width="600" height="200" />';
