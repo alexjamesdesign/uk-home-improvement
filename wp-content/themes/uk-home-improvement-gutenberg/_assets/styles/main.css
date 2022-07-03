@@ -32,7 +32,7 @@
 @media (min-width: 1025px) { 
     .header-shape {
         position: absolute;
-        right: 0;
+        right: -30px;
         bottom: 0;
         display: block;
     }
@@ -41,8 +41,8 @@
 .skew-left { 
     width: 0;
     height: 0;
-    border-top: 100px solid #fff;
-    border-right: 100px solid transparent;
+    border-top: 120px solid #fff;
+    border-right: 120px solid transparent;
     position: absolute;
     left: 0;
     top: 0;

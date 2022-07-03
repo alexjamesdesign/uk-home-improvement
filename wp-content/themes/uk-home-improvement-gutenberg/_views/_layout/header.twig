@@ -1,6 +1,6 @@
 <header class="relative w-full lg:pt-10 lg:pb-10 lg:border-b-8 lg:border-primary-dark">
 
-	<div class="absolute top-0 right-0 z-10 hidden top-bar lg:block">
+	<div class="absolute top-0 right-0 z-10 items-center justify-end hidden top-bar lg:flex">
 
 		<nav id="menu-secondary" class="hidden menu lg:block" aria-labelledby="secondary-navigation">
 			<span class="sr-only" id="secondary-navigation">Secondary Navigation</span>
@@ -12,6 +12,11 @@
 				{% endfor %}
 			</ul>
 		</nav>
+
+		<form role="search" method="get" id="searchform" data-animate="fade" class="flex justify-between mr-4 border-2 border-gray-300 delay-10 animate flex-nowrap grow-0 shrink-0 searchform" action="{{ site.link }}">
+			<input type="text" placeholder="SEARCH" value="{{ function('get_search_query') }}" name="s" id="searchbox" class="w-36" />
+			<input type="submit" id="searchsubmit" value=" " class="border-l-2 w-[42px] border-gray-300" />
+		</form>
 
 	</div>
 
@@ -36,21 +41,21 @@
 
 			<div class="relative items-center hidden bg-primary lg:flex lg:flex-nowrap">
 
-				<div class="lg:flex lg:justify-items-end w-full max-w-[1150px] pl-24">
+				<div class="w-full pl-24 lg:flex lg:justify-items-end">
 
 					<span class="skew-left"></span>
 
-					<nav id="menu-primary" class="blockbg-primary menu" aria-labelledby="primary-navigation">
+					<nav id="menu-primary" class="block w-full ml-4 bg-primary menu" aria-labelledby="primary-navigation">
 						<span class="sr-only" id="primary-navigation">Primary Navigation</span>
-						<ul class="flex flex-wrap justify-center w-full font-bold uppercase text-secondary menu-primary">
+						<ul class="flex flex-wrap justify-end w-full font-bold uppercase text-secondary menu-primary">
 							{% for item in primaryMenu.items %}
 								<li class="{{item.class}}">
-									<a data-animate="fadeSubtle" href="{{item.link}}" class="animate relative block p-4 hover:text-black focus:text-black {{ item.current ? 'text-primary-dark' }} delay-{{loop.index}}">{{item.name}}</a>
+									<a data-animate="fadeSubtle" href="{{item.link}}" class="animate relative block p-4 text-sm hover:text-black focus:text-black {{ item.current ? 'text-primary-dark' }} delay-{{loop.index}}">{{item.name}}</a>
 									{% if item.children %}
 										<ul class="z-30 sub-menu">
 											{% for child in item.children %}
 												<li class="{{child.class}}">
-													<a href="{{child.link}}" class="block p-4 text-gray-500 hover:text-black focus:text-black">{{child.name}}</a>
+													<a href="{{child.link}}" class="block p-4 text-sm text-gray-500 hover:text-black focus:text-black">{{child.name}}</a>
 												</li>
 											{% endfor %}
 										</ul>
@@ -61,12 +66,6 @@
 					</nav>
 
 				</div>
-
-				<form role="search" method="get" id="searchform" data-animate="fade" class="flex justify-between w-64 mr-4 border-2 border-gray-300 delay-10 animate flex-nowrap grow-0 shrink-0 searchform" action="{{ site.link }}">
-					<input type="text" placeholder="SEARCH" value="{{ function('get_search_query') }}" name="s" id="searchbox" class="w-[214px]" />
-					<input type="submit" id="searchsubmit" value=" " class="border-l-2 w-[42px] border-gray-300" />
-				</form>
-
 				
 			</div>
 

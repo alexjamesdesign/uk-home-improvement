@@ -7,7 +7,7 @@ $context['post'] = $timber_post;
 $args = array(
     'taxonomy' => 'category',
     'hide_empty' => false,
-    // 'parent' => 0
+    'parent' => 0
 );
 
 $context['categories'] = Timber::get_terms($args);

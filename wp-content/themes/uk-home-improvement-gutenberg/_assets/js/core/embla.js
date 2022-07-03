@@ -9,7 +9,7 @@ const setupEmblaCarousel = (emblaNode, options) => {
     });
 };
 
-const options = { loop: true };
+const options = { loop: true, align: "center", };
 const emblaNodes = [].slice.call(document.querySelectorAll(".embla"));
 const emblaCarousels = emblaNodes.map(emblaNode =>
   setupEmblaCarousel(emblaNode, options)

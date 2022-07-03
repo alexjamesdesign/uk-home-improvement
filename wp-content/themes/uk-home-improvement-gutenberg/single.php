@@ -9,6 +9,18 @@ $context['categories'] = get_categories( array(
     'order'   => 'ASC'
 ) );
 
+$side_menu = [
+  'post_type'         => 'page',
+  'posts_per_page'    => -1,
+  'orderby'           => 'name',
+  'order'             => 'ASC',
+  'paged'             => $paged,
+  'post_parent'       => $post->post_parent, 
+  'hierarchical'      => 0,
+];
+
+$context['side_menu'] = new Timber\PostQuery($side_menu);
+
 Timber::render( [ 'single.twig' ], $context );
 
 if (is_single()) { ?>
