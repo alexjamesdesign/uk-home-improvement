@@ -17,9 +17,9 @@ function filter_allowed_block_types_when_post_provided( $allowed_block_types, $e
       // Pre-defined Gutenberg blocks can be allowed here
       // For a list of all blocks, visit: https://wordpress.org/support/article/blocks/ or here https://gist.github.com/DavidPeralvarez/37c8c148f890d946fadb2c25589baf00 
       $allowedBlocks = array(
-        // 'core/paragraph',
-        // 'core/heading',
-        // 'core/image',
+        'core/paragraph',
+        'core/heading',
+        'core/image',
         // 'core/gallery',
         // 'core/embed'
       );
