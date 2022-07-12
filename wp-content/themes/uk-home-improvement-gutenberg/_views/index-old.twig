@@ -1,0 +1,47 @@
+{% extends '_layout/base.twig' %}
+
+{% block hero %}
+	{% include '_blocks/hero.twig' with { 
+		preHeading: "Category",
+		heading: term.name,
+		imageComponent: "short",
+		image: post.thumbnail,
+	} %}
+{% endblock %}
+
+{% block content %}
+
+	{# News Index - Variant 2 #}
+
+	{% include '_components/filter-non-rest.twig' %}
+
+	<div class="relative w-full bg-secondary-light white-bg-top">
+		
+		<div class="container py-6 md:py-8">
+
+		{{ dump(child) }}
+		
+			<div class="grid-parent">
+			
+				{% for post in posts %}
+					{% include "_components/_atoms/card.twig" with {
+						category : "Category",
+						cardLink: function("get_permalink", post.ID),
+						title : post.title,
+						snippet : "Snippet",
+					} %}
+				{% endfor %}	
+
+			</div>
+
+		</div>
+		
+	</div>
+
+	<section class="flex items-center justify-center mb-4">
+
+		{% include "_components/pagination.twig" %}
+
+	</section>
+
+{% endblock %}
