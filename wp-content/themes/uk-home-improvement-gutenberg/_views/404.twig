@@ -1,14 +1,27 @@
 {% extends '_layout/base.twig' %}
 
+{% block hero %}
+	{% include '_blocks/hero.twig' with { 
+		preHeading: "Error",
+		heading: "Page Not Found",
+		imageComponent: "short",
+		image: term.thumbnail.src,
+	} %}
+{% endblock %}
+
 {% block content %}
 
-	<main class="container max-w-md p-4">
+	<main class="container">
 
-		<h1>Page not found</h1>
+		<div class="grid grid-cols-1 gap-2 mb-4">
 
-		<p>Please go to the
-			<a href="{{site.url}}">homepage</a>.</p>
+			<h1>Page not found</h1>
+
+			<p>The page you were looking for isn't available. Please go to the <a href="{{site.url}}">homepage</a> or use the navigation.</p>
+
+		</div>
 
 	</main>
+	
 
 {% endblock %}
