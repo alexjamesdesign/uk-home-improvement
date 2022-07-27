@@ -1,12 +1,12 @@
 {% if fn('is_front_page') %}
       
       {# Homepage - latest post #}
-      {% for post in latestpost %}
+      {% for post in featured %}
 
         <div class="flex flex-wrap content-center w-full animate md:pl-4 hero-left" data-animate="fadeIn">
           <p class="block w-full mb-2 uppercase h2 text-secondary">{{preHeading}}</p>
-          <p class="h1xl">{{post.title}}</p>
-          <p>{{post.content|truncate(30)|striptags|raw}}</p>
+          <p class="block h1xl">{{post.title|capitalize}}</p>
+          <p class="block w-full" >{{post.content|truncate(30)|striptags|raw}}</p>
           
           {% include "_components/_atoms/button.twig" with {
             buttonText : "Read More",

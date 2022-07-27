@@ -10,6 +10,11 @@ $args = array(
     // 'parent' => 0
 );
 
+$context['featured'] = new Timber\PostQuery(array(
+    'post_type' => 'post',
+    'posts_per_page' => 1,
+));
+
 $context['categories'] = Timber::get_terms($args);
 
 $context['posts'] = new Timber\PostQuery();

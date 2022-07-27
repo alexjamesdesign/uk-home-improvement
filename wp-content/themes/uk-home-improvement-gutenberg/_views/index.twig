@@ -19,9 +19,11 @@
 		
 		<div class="container py-6 md:py-8">
 
-		{{ dump(child) }}
+		{# {{ dump(child) }} #}
 		
 			<div class="grid-parent">
+
+			{% if posts %}
 			
 				{% for post in posts %}
 					{% include "_components/_atoms/card.twig" with {
@@ -30,7 +32,9 @@
 						title : post.title,
 						snippet : "Snippet",
 					} %}
-				{% endfor %}	
+				{% endfor %}
+
+			{% endif %}	
 
 			</div>
 
