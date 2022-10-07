@@ -1,9 +1,17 @@
 {# Space for an Ad #} 
-  <div class="container relative z-20 mb-10 md:pb-0 md:pt-10">
-    <div class="bg-gray-400 h-36">
-		{{options.ad_space_two}}
+<div class="container relative z-20 pb-10 md:pb-0 md:pt-10">
+{% if options.ad_space_two_graphic %}
+	<div class="mb-5 ad-two-graphic">
+	<a href="{{options.ad_space_two_link}}" target="_blank" class="block lg:hidden"><img class="block w-full mx-auto lg:hidden" src="{{options.ad_space_two_graphic_mobile.url}}" alt="{{site.title}} Logo"/></a>
+	<a href="{{options.ad_space_two_link}}" target="_blank" class="hidden lg:block"><img class="hidden w-full mx-auto lg:block" src="{{options.ad_space_two_graphic.url}}" alt="{{site.title}} Logo"/></a>
 	</div>
-  </div>
+{% endif %}
+{% if options.ad_space_two_google %}
+	<div class="flex justify-center ad-two-google">
+	{{ options.ad_space_two_google }}
+	</div>
+{% endif %}
+</div>
 
 {% set footerLinkClasses = "block mb-1 lg:pb-2 px-3 text-gray-500 hover:text-black focus:text-black" %}
 
