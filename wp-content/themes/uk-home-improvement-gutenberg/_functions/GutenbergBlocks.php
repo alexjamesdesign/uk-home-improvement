@@ -20,6 +20,7 @@ function filter_allowed_block_types_when_post_provided( $allowed_block_types, $e
         'core/paragraph',
         'core/heading',
         'core/image',
+        'core/spacer',
         // 'core/gallery',
         // 'core/embed'
       );

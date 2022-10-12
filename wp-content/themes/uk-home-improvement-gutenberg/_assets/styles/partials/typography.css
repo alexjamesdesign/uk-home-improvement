@@ -56,9 +56,9 @@ h3, .h3 {
 
 /* Copy */
 
-.wp-block-spacer {
+/* .wp-block-spacer {
   display: none;
-}
+} */
 
 p {
   @apply text-base text-gray-600;
