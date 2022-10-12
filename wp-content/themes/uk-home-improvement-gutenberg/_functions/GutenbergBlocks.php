@@ -21,8 +21,10 @@ function filter_allowed_block_types_when_post_provided( $allowed_block_types, $e
         'core/heading',
         'core/image',
         'core/spacer',
-        // 'core/gallery',
-        // 'core/embed'
+        'core/list',
+        'core/quote',
+        'core/code',
+        'core/table'
       );
 
       // Scan the directory for all our custom twig blocks
@@ -55,12 +57,12 @@ add_filter( 'timber/acf-gutenberg-blocks-data/hero', function( $context ){
 // Add default parameters to blocks
 // Commented out until tested further
 
-// add_filter( 'timber/acf-gutenberg-blocks-default-data', function( $data ){
-//   $data['default'] = array(
-//       'post_type' => ['post','page'],
-//   );
-//   $data['pages'] = array(
-//       'post_type' => 'page',
-//   );
-//   return $data;
-// } );
+add_filter( 'timber/acf-gutenberg-blocks-default-data', function( $data ){
+  $data['default'] = array(
+      'post_type' => ['post','page'],
+  );
+  $data['pages'] = array(
+      'post_type' => 'page',
+  );
+  return $data;
+} );

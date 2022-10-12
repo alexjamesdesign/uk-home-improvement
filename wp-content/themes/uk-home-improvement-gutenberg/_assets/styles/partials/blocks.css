@@ -1,0 +1,177 @@
+/* Block: Gallery ---------------------------- */
+
+.wp-block-gallery ul {
+	list-style: none;
+	margin: 0 0 -1.6rem 0;
+}
+
+figure.wp-block-gallery.alignnone,
+figure.wp-block-gallery.aligncenter {
+	margin-bottom: 3rem;
+	margin-top: 3rem;
+}
+
+figure.wp-block-gallery.alignleft {
+	margin: 0.3rem 2rem 2rem 0;
+}
+
+figure.wp-block-gallery.alignright {
+	margin: 0.3rem 0 2rem 2rem;
+}
+
+figure.wp-block-gallery.alignwide {
+	margin-bottom: 4rem;
+	margin-top: 4rem;
+}
+
+figure.wp-block-gallery.alignfull {
+	margin-bottom: 5rem;
+	margin-top: 5rem;
+}
+
+/* Block: Table ------------------------------ */
+
+table,
+.wp-block-table {
+	width: 100%;
+	min-width: 240px;
+	border-collapse: collapse;
+}
+
+table thead,
+table tfoot,
+.wp-block-table thead,
+.wp-block-table tfoot {
+	text-align: center;
+}
+
+table th,
+.wp-block-table th {
+	font-family: var(--heading--font-family);
+}
+
+table td,
+table th,
+.wp-block-table td,
+.wp-block-table th {
+	padding: calc(0.5 * var(--global--spacing-unit));
+	border: 1px solid;
+}
+
+table figcaption,
+.wp-block-table figcaption {
+	color: var(--global--color-primary);
+	font-size: var(--global--font-size-xs);
+}
+
+table.is-style-regular .has-background,
+table.is-style-stripes .has-background,
+table.is-style-stripes .has-background thead tr,
+table.is-style-stripes .has-background tfoot tr,
+table.is-style-stripes .has-background tbody tr,
+.wp-block-table.is-style-regular .has-background,
+.wp-block-table.is-style-stripes .has-background,
+.wp-block-table.is-style-stripes .has-background thead tr,
+.wp-block-table.is-style-stripes .has-background tfoot tr,
+.wp-block-table.is-style-stripes .has-background tbody tr {
+	color: var(--table--has-background-text-color);
+}
+
+table.is-style-stripes,
+.wp-block-table.is-style-stripes {
+	border-color: var(--table--stripes-border-color);
+}
+
+table.is-style-stripes th,
+table.is-style-stripes td,
+.wp-block-table.is-style-stripes th,
+.wp-block-table.is-style-stripes td {
+	border-width: 0;
+}
+
+table.is-style-stripes tbody tr:nth-child(odd),
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+	background-color: var(--table--stripes-background-color);
+}
+
+
+/* Block Gallery */
+
+/* .wp-block-gallery {
+	margin: 0 auto;
+    display: flex;
+}
+
+.wp-block-gallery .blocks-gallery-image,
+.wp-block-gallery .blocks-gallery-item {
+	width: calc((100% - var(--global--spacing-unit)) / 2);
+}
+
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption {
+	margin: 0;
+	color: var(--global--color-white);
+	font-size: var(--global--font-size-xs);
+}
+
+.wp-block-gallery .blocks-gallery-image figcaption a,
+.wp-block-gallery .blocks-gallery-item figcaption a {
+	color: var(--global--color-white);
+}
+
+.wp-block-gallery .blocks-gallery-image figcaption a:focus,
+.wp-block-gallery .blocks-gallery-item figcaption a:focus {
+	background-color: transparent;
+	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
+	text-decoration: none;
+}
+
+.wp-block-gallery .blocks-gallery-image a:focus img,
+.wp-block-gallery .blocks-gallery-item a:focus img {
+	outline-offset: 2px;
+} */
+
+/* .wp-block-image {
+	text-align: center;
+}
+
+.wp-block-image figcaption {
+	color: var(--global--color-primary);
+	font-size: var(--global--font-size-xs);
+	line-height: var(--global--line-height-body);
+	margin-top: calc(0.5 * var(--global--spacing-unit));
+	margin-bottom: var(--global--spacing-unit);
+	text-align: center;
+}
+
+.wp-block-image .alignright {
+	margin-right: var(--global--spacing-horizontal);
+}
+
+.wp-block-image .alignleft {
+	margin-left: var(--global--spacing-horizontal);
+}
+
+.wp-block-image a:focus img {
+	outline-offset: 2px;
+}
+
+.entry-content > *[class=wp-block-image],
+.entry-content [class*=inner-container] > *[class=wp-block-image] {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.entry-content > *[class=wp-block-image] + *,
+.entry-content [class*=inner-container] > *[class=wp-block-image] + * {
+	margin-top: 0;
+}
+
+.wp-block-image.is-style-twentytwentyone-border img,
+.wp-block-image.is-style-twentytwentyone-image-frame img {
+	border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+}
+
+.wp-block-image.is-style-twentytwentyone-image-frame img {
+	padding: var(--global--spacing-unit);
+} */
